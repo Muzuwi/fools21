@@ -1,0 +1,62 @@
+08,0a,0b,0f,
+7a,74,
+34,33,32,
+60,
+ca,cb,c9
+db,d9, 
+ec,
+
+db08
+
+db0f
+
+jump to db34 - last item quantity + palette + sandwich ticks
+
+
+d4,ef,eb,d0
+
+
+d9db
+
+6034 gadget - increase sp 0x120
+
+
+
+ACE steps:
+
+## stage 0:
+fill inv
+after filling, find 0x20 reviver seeds (no battles)
+retire - jump to ret address @ f9d4 
+
+## stage 1:
+#  at entry, hl=DAC4
+
+
+jump to db34 - last item count must be 31 (ld sp, u16)
+stack address controlled by palette byte and sandwich ticks
+(sandwich_ticks | palette<<8), possible ranges:
+	{c8-00}d0
+	{c8-00}d4
+	{c8-00}eb
+	{c8-00}ef
+
+hopefully we reach the ret before everything dies (use ret @ 01:db3a)
+
+
+
+db5a JP HL
+
+
+
+
+
+ANOTHER ACE?????
+## stage 1
+target - d9ec
+wait mins=c3 sec=82 frame=b8
+activate retire
+
+
+
+

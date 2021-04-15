@@ -1,0 +1,2 @@
+SEED=6521e0a1/ Found pattern occurence at [8,6]!
+
